@@ -14,14 +14,16 @@ Summary: Simulates continuous distributions of random vectors using Markov chain
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-mcmc-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-mcmc-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-mcmc-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-mcmc-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-mcmc-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-mcmc-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-mcmc-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-mcmc-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-mcmc-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-mcmc-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-mcmc-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-mcmc-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-mcmc/badges/version.svg)](https://anaconda.org/conda-forge/r-mcmc)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-mcmc/badges/downloads.svg)](https://anaconda.org/conda-forge/r-mcmc)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--mcmc-green.svg)](https://anaconda.org/conda-forge/r-mcmc) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-mcmc.svg)](https://anaconda.org/conda-forge/r-mcmc) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-mcmc.svg)](https://anaconda.org/conda-forge/r-mcmc) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-mcmc.svg)](https://anaconda.org/conda-forge/r-mcmc) |
 
 Installing r-mcmc
 =================
