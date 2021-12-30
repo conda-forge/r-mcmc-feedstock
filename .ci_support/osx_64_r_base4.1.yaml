@@ -5,9 +5,11 @@ c_compiler:
 c_compiler_version:
 - '11'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
+cran_mirror:
+- https://cran.r-project.org
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pin_run_as_build:

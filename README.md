@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mcmc-feedstock/blob/master/LICENSE.txt)
 
-Summary: Simulates continuous distributions of random vectors using Markov chain Monte Carlo (MCMC).  Users specify the distribution by an R function that evaluates the log unnormalized density.  Algorithms are random walk Metropolis algorithm (function metrop), simulated tempering (function temper), and morphometric random walk Metropolis (Johnson and Geyer, 2012, <https://doi.org/10.1214/12-AOS1048>, function morph.metrop), which achieves geometric ergodicity by change of variable.
+Summary: Simulates continuous distributions of random vectors using Markov chain Monte Carlo (MCMC).  Users specify the distribution by an R function that evaluates the log unnormalized density.  Algorithms are random walk Metropolis algorithm (function metrop), simulated tempering (function temper), and morphometric random walk Metropolis (Johnson and Geyer, 2012, <doi:10.1214/12-AOS1048>, function morph.metrop), which achieves geometric ergodicity by change of variable.
 
 Current build status
 ====================
@@ -109,7 +109,8 @@ conda search r-mcmc --channel conda-forge
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -169,10 +170,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
-* [@daler](https://github.com/daler/)
-* [@dpryan79](https://github.com/dpryan79/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
 
