@@ -1,5 +1,4 @@
-{% set version = "0.9-7" %}
-
+{% set version = '0.9-7' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,51 +7,71 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: mcmc_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/mcmc_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/mcmc/mcmc_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/mcmc_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/mcmc/mcmc_{{ version }}.tar.gz
   sha256: b7c4d3d5f9364c67a4a3cd49296a61c315ad9bd49324a22deccbacb314aa8260
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
-  skip: true  # [win32]
-
+  merge_build_host: True  # [win]
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-
   run:
     - r-base
+    - {{ native }}gcc-libs         # [win]
 
 test:
   commands:
-    - $R -e "library('mcmc')"  # [not win]
+    - $R -e "library('mcmc')"           # [not win]
     - "\"%R%\" -e \"library('mcmc')\""  # [win]
 
 about:
   home: http://www.stat.umn.edu/geyer/mcmc/, https://github.com/cjgeyer/mcmc
   license: MIT
-  license_file: LICENSE
-  summary: Simulates continuous distributions of random vectors using Markov chain Monte Carlo (MCMC).  Users specify the distribution by an R function that evaluates
-    the log unnormalized density.  Algorithms are random walk Metropolis algorithm (function metrop), simulated tempering (function temper), and morphometric random
-    walk Metropolis (Johnson and Geyer, 2012, <https://doi.org/10.1214/12-AOS1048>, function morph.metrop), which achieves geometric ergodicity by change of variable.
+  summary: Simulates continuous distributions of random vectors using Markov chain Monte Carlo
+    (MCMC).  Users specify the distribution by an R function that evaluates the log
+    unnormalized density.  Algorithms are random walk Metropolis algorithm (function
+    metrop), simulated tempering (function temper), and morphometric random walk Metropolis
+    (Johnson and Geyer, 2012, <doi:10.1214/12-AOS1048>, function morph.metrop), which
+    achieves geometric ergodicity by change of variable.
   license_family: MIT
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - dpryan79
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
+
+# Package: mcmc
+# Version: 0.9-7
+# Date: 2020-03-20
+# Title: Markov Chain Monte Carlo
+# Author: Charles J. Geyer <charlie@stat.umn.edu> and Leif T. Johnson <ltjohnson@google.com>
+# Maintainer: Charles J. Geyer <charlie@stat.umn.edu>
+# Depends: R (>= 3.0.2)
+# Imports: stats
+# Suggests: xtable, Iso
+# ByteCompile: TRUE
+# Description: Simulates continuous distributions of random vectors using Markov chain Monte Carlo (MCMC).  Users specify the distribution by an R function that evaluates the log unnormalized density.  Algorithms are random walk Metropolis algorithm (function metrop), simulated tempering (function temper), and morphometric random walk Metropolis (Johnson and Geyer, 2012, <doi:10.1214/12-AOS1048>, function morph.metrop), which achieves geometric ergodicity by change of variable.
+# License: MIT + file LICENSE
+# URL: http://www.stat.umn.edu/geyer/mcmc/, https://github.com/cjgeyer/mcmc
+# NeedsCompilation: yes
+# Packaged: 2020-03-21 00:49:36 UTC; geyer
+# Repository: CRAN
+# Date/Publication: 2020-03-21 19:00:13 UTC
