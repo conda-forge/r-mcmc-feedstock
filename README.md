@@ -3,6 +3,7 @@ About r-mcmc-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mcmc-feedstock/blob/main/LICENSE.txt)
 
+
 About r-mcmc
 ------------
 
@@ -11,6 +12,7 @@ Home: http://www.stat.umn.edu/geyer/mcmc/, https://github.com/cjgeyer/mcmc
 Package license: MIT
 
 Summary: Simulates continuous distributions of random vectors using Markov chain Monte Carlo (MCMC).  Users specify the distribution by an R function that evaluates the log unnormalized density.  Algorithms are random walk Metropolis algorithm (function metrop), simulated tempering (function temper), and morphometric random walk Metropolis (Johnson and Geyer, 2012, <doi:10.1214/12-AOS1048>, function morph.metrop), which achieves geometric ergodicity by change of variable.
+
 About r-mcmc
 ------------
 
@@ -153,7 +155,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
