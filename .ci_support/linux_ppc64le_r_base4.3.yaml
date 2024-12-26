@@ -15,7 +15,7 @@ channel_targets:
 cran_mirror:
 - https://cran.r-project.org
 docker_image:
-- quay.io/condaforge/linux-anvil-x86_64:alma9
+- quay.io/condaforge/linux-anvil-ppc64le:alma9
 pin_run_as_build:
   r-base:
     min_pin: x.x
@@ -23,4 +23,4 @@ pin_run_as_build:
 r_base:
 - '4.3'
 target_platform:
-- linux-64
+- linux-ppc64le
